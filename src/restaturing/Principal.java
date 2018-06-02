@@ -21,7 +21,7 @@ public class Principal extends javax.swing.JFrame {
      * Creates new form Principal
      */
     //Declaración de la matriz de Transición y el vector del alfabeto
-    String matrizTransicion[][][] = new String[4][5][3];
+    String matrizTransicion[][][] = new String[7][5][4];
     String alfabeto[] = new String[5];
 
     public Principal() {
@@ -34,6 +34,182 @@ public class Principal extends javax.swing.JFrame {
         alfabeto[2] = "10";
         alfabeto[3] = "11";
         alfabeto[4] = "  ";
+        
+        //Llenado de la matriz de transición
+        matrizTransicion[0][0][0] = "0"; //Estado al que se va a ir
+        matrizTransicion[0][0][1] = "0"; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[0][0][2] = " "; //Dato que se coloca en la tercera cinta
+        matrizTransicion[0][0][3] = "1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+
+        matrizTransicion[0][1][0] = "0"; //Estado al que se va a ir
+        matrizTransicion[0][1][1] = "1"; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[0][1][2] = " "; //Dato que se coloca en la tercera cinta
+        matrizTransicion[0][1][3] = "1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[0][2][0] = "0"; //Estado al que se va a ir
+        matrizTransicion[0][2][1] = "0"; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[0][2][2] = " "; //Dato que se coloca en la tercera cinta
+        matrizTransicion[0][2][3] = "1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[0][3][0] = "0"; //Estado al que se va a ir
+        matrizTransicion[0][3][1] = "1"; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[0][3][2] = " "; //Dato que se coloca en la tercera cinta
+        matrizTransicion[0][3][3] = "1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[0][4][0] = "1"; //Estado al que se va a ir
+        matrizTransicion[0][4][1] = " "; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[0][4][2] = " "; //Dato que se coloca en la tercera cinta
+        matrizTransicion[0][4][3] = "-1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[1][0][0] = "1"; //Estado al que se va a ir
+        matrizTransicion[1][0][1] = "0"; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[1][0][2] = " "; //Dato que se coloca en la tercera cinta
+        matrizTransicion[1][0][3] = "-1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+
+        matrizTransicion[1][1][0] = "2"; //Estado al que se va a ir
+        matrizTransicion[1][1][1] = "1"; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[1][1][2] = " "; //Dato que se coloca en la tercera cinta
+        matrizTransicion[1][1][3] = "-1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[1][2][0] = "1"; //Estado al que se va a ir
+        matrizTransicion[1][2][1] = "0"; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[1][2][2] = " "; //Dato que se coloca en la tercera cinta
+        matrizTransicion[1][2][3] = "-1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[1][3][0] = "2"; //Estado al que se va a ir
+        matrizTransicion[1][3][1] = "1"; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[1][3][2] = " "; //Dato que se coloca en la tercera cinta
+        matrizTransicion[1][3][3] = "-1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[1][4][0] = "3"; //Estado al que se va a ir
+        matrizTransicion[1][4][1] = " "; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[1][4][2] = " "; //Dato que se coloca en la tercera cinta
+        matrizTransicion[1][4][3] = "1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[2][0][0] = "2"; //Estado al que se va a ir
+        matrizTransicion[2][0][1] = "1"; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[2][0][2] = " "; //Dato que se coloca en la tercera cinta
+        matrizTransicion[2][0][3] = "-1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+
+        matrizTransicion[2][1][0] = "2"; //Estado al que se va a ir
+        matrizTransicion[2][1][1] = "0"; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[2][1][2] = " "; //Dato que se coloca en la tercera cinta
+        matrizTransicion[2][1][3] = "-1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[2][2][0] = "2"; //Estado al que se va a ir
+        matrizTransicion[2][2][1] = "1"; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[2][2][2] = " "; //Dato que se coloca en la tercera cinta
+        matrizTransicion[2][2][3] = "-1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[2][3][0] = "2"; //Estado al que se va a ir
+        matrizTransicion[2][3][1] = "0"; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[2][3][2] = " "; //Dato que se coloca en la tercera cinta
+        matrizTransicion[2][3][3] = "-1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[2][4][0] = "3"; //Estado al que se va a ir
+        matrizTransicion[2][4][1] = " "; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[2][4][2] = " "; //Dato que se coloca en la tercera cinta
+        matrizTransicion[2][4][3] = "1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[3][0][0] = "3"; //Estado al que se va a ir
+        matrizTransicion[3][0][1] = "0"; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[3][0][2] = " "; //Dato que se coloca en la tercera cinta
+        matrizTransicion[3][0][3] = "1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+
+        matrizTransicion[3][1][0] = "3"; //Estado al que se va a ir
+        matrizTransicion[3][1][1] = "1"; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[3][1][2] = " "; //Dato que se coloca en la tercera cinta
+        matrizTransicion[3][1][3] = "1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[3][2][0] = "3"; //Estado al que se va a ir
+        matrizTransicion[3][2][1] = "0"; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[3][2][2] = " "; //Dato que se coloca en la tercera cinta
+        matrizTransicion[3][2][3] = "1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[3][3][0] = "3"; //Estado al que se va a ir
+        matrizTransicion[3][3][1] = "1"; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[3][3][2] = " "; //Dato que se coloca en la tercera cinta
+        matrizTransicion[3][3][3] = "1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[3][4][0] = "4"; //Estado al que se va a ir
+        matrizTransicion[3][4][1] = " "; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[3][4][2] = " "; //Dato que se coloca en la tercera cinta
+        matrizTransicion[3][4][3] = "-1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[4][0][0] = "4"; //Estado al que se va a ir
+        matrizTransicion[4][0][1] = "0"; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[4][0][2] = "0"; //Dato que se coloca en la tercera cinta
+        matrizTransicion[4][0][3] = "-1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+
+        matrizTransicion[4][1][0] = "4"; //Estado al que se va a ir
+        matrizTransicion[4][1][1] = "1"; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[4][1][2] = "1"; //Dato que se coloca en la tercera cinta
+        matrizTransicion[4][1][3] = "-1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[4][2][0] = "4"; //Estado al que se va a ir
+        matrizTransicion[4][2][1] = "0"; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[4][2][2] = "1"; //Dato que se coloca en la tercera cinta
+        matrizTransicion[4][2][3] = "-1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[4][3][0] = "5"; //Estado al que se va a ir
+        matrizTransicion[4][3][1] = "1"; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[4][3][2] = "0"; //Dato que se coloca en la tercera cinta
+        matrizTransicion[4][3][3] = "-1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[4][4][0] = "6"; //Estado al que se va a ir
+        matrizTransicion[4][4][1] = " "; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[4][4][2] = " "; //Dato que se coloca en la tercera cinta
+        matrizTransicion[4][4][3] = "1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[5][0][0] = "4"; //Estado al que se va a ir
+        matrizTransicion[5][0][1] = "0"; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[5][0][2] = "1"; //Dato que se coloca en la tercera cinta
+        matrizTransicion[5][0][3] = "-1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+
+        matrizTransicion[5][1][0] = "5"; //Estado al que se va a ir
+        matrizTransicion[5][1][1] = "1"; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[5][1][2] = "0"; //Dato que se coloca en la tercera cinta
+        matrizTransicion[5][1][3] = "-1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[5][2][0] = "5"; //Estado al que se va a ir
+        matrizTransicion[5][2][1] = "0"; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[5][2][2] = "0"; //Dato que se coloca en la tercera cinta
+        matrizTransicion[5][2][3] = "-1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[5][3][0] = "5"; //Estado al que se va a ir
+        matrizTransicion[5][3][1] = "1"; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[5][3][2] = "1"; //Dato que se coloca en la tercera cinta
+        matrizTransicion[5][3][3] = "-1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+       
+        matrizTransicion[5][4][0] = "6"; //Estado al que se va a ir
+        matrizTransicion[5][4][1] = " "; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[5][4][2] = "1"; //Dato que se coloca en la tercera cinta
+        matrizTransicion[5][4][3] = "1"; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[6][0][0] = "99"; //Estado al que se va a ir
+        matrizTransicion[6][0][1] = ""; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[6][0][2] = ""; //Dato que se coloca en la tercera cinta
+        matrizTransicion[6][0][3] = ""; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+
+        matrizTransicion[6][1][0] = "99"; //Estado al que se va a ir
+        matrizTransicion[6][1][1] = ""; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[6][1][2] = ""; //Dato que se coloca en la tercera cinta
+        matrizTransicion[6][1][3] = ""; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[6][2][0] = "99"; //Estado al que se va a ir
+        matrizTransicion[6][2][1] = ""; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[6][2][2] = ""; //Dato que se coloca en la tercera cinta
+        matrizTransicion[6][2][3] = ""; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[6][3][0] = "99"; //Estado al que se va a ir
+        matrizTransicion[6][3][1] = ""; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[6][3][2] = ""; //Dato que se coloca en la tercera cinta
+        matrizTransicion[6][3][3] = ""; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
+        
+        matrizTransicion[6][4][0] = "99"; //Estado al que se va a ir
+        matrizTransicion[6][4][1] = ""; //Dato por el que se cambia la segunda cinta
+        matrizTransicion[6][4][2] = ""; //Dato que se coloca en la tercera cinta
+        matrizTransicion[6][4][3] = ""; //Movimiento que realiza el apuntador, ya sea -1 es IZQUIERDA, 0 se DETIENE, 1 es DERECHA
     }
 
     /**
@@ -71,6 +247,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Resta Binaria con Máquina de Turing");
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
         jLabel9.setText("Este programa saca la resta de dos datos binarios ingresados con la máquina de Turing");
@@ -83,7 +260,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel7.setText("Programa utilizando máquina de Turing");
         jLabel7.setToolTipText("Nombre de la práctica");
 
-        Resultado.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        Resultado.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         Resultado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         Resultado.setToolTipText("Resultado en el que se muestra.");
         Resultado.setEnabled(false);
@@ -104,6 +281,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("-");
 
         Obtener.setBackground(new java.awt.Color(102, 255, 204));
@@ -383,29 +561,43 @@ public class Principal extends javax.swing.JFrame {
         //Método que obtiene el estado al cual se va a mover el apuntador
         return matrizTransicion[estado][valor][0];
     }
+    
+    public String ObtencionConvSegunda (int estado, int valor){
+        //Método que obtiene el valor que se va a sustituir la segunda cinta
+        return matrizTransicion[estado][valor][1];
+    }
 
     public String ObtencionConversion(int estado, int valor) {
         //Método que obtiene el valor por el que se va a cambiar la casilla
-        return matrizTransicion[estado][valor][1];
+        return matrizTransicion[estado][valor][2];
     }
 
     public String ObtencionMovimiento(int estado, int valor) {
         //Método que obtiene el movimiento que el apuntador va hacer.
-        return matrizTransicion[estado][valor][2];
+        return matrizTransicion[estado][valor][3];
+    }
+    
+    public String[] LlenarVector(String[] cadena) {
+        //Método que tiene como función llenar el vector que será usado para el complemento a 2
+        for (int i = 0; i < Texto.getText().length(); i++) { //Ciclo que vacía lo que hay en la caja de texto al vector
+            cadena[i] = Character.toString(Texto.getText().charAt(i));
+        }
+        return cadena;
     }
 
     private void ObtenerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ObtenerActionPerformed
         // Método que se deesencadena tras pulsar el boton de Obtener de la interfaz principal
-        int estado = 0, movimiento, posicion = 1, valor, cambio, state = 0;
-        String caracter, Text, modificado = "", mostrar = "";
+        int estado = 0, movimiento, posicion = 1, valor, state = 0;
+        String caracter, Text, modificado = "", mostrar = "", cambio;
         boolean error = false;
 
         EspacioCadena(); // Llamado al método que agrega el espacio para la terminación de la máquina.
+        String[] cadena = new String [Texto.getText().length()]; //Definición del vector que contendrá la segunda cadena        
+        cadena = LlenarVector(cadena); //Llamado al método que llena el vector creado para la segunda cadena
 
-        //if (Texto.getText().length() == Valor.getText().length()) {
         do {
-            caracter = Character.toString(Texto.getText().charAt(posicion)); //Obtiene el valor de la cadena 1.
-            Text = Character.toString(Valor.getText().charAt(posicion)); //Obtiene el valor de la segunda cadena
+            caracter = Character.toString(Valor.getText().charAt(posicion)); //Obtiene el valor de la primer cadena
+            Text = cadena[posicion]; //Obtiene el valor de la segunda cadena.
 
             if (" 1".equals(caracter + Text) || " 0".equals(caracter + Text) || "1 ".equals(caracter + Text) || "0 ".equals(caracter + Text)) {
                 mostrar += "\n[" + state + "] [" + caracter + Text + "] ---->";
@@ -421,8 +613,7 @@ public class Principal extends javax.swing.JFrame {
                     error = true;
 
                 } else {
-                    state = estado; //Gaurda el estado para que no se pierda y sirva de busqueda en los respectivos métodos que se necesiten.
-                    System.out.println(modificado);
+                    state = estado; //Guarda el estado para que no se pierda y sirva de busqueda en los respectivos métodos que se necesiten.
                     estado = Integer.parseInt(ObtencionEstado(state, valor)); //Llamado al método que obtiene el estado al que se moverá el apuntador
 
                     if (estado == 99) { //Entra si encuentra el estado final
@@ -431,15 +622,15 @@ public class Principal extends javax.swing.JFrame {
                         error = true;
 
                     } else { //Entra si aún sigue en el proceso sin ningún error encontrado.
-                        cambio = Integer.parseInt(this.ObtencionConversion(state, valor)); //Llamado del método de obtención de caracter por el que se va a cambiar el valor en la cadena.
-                        if (cambio != 3) {
+                        cambio = this.ObtencionConversion(state, valor); //Llamado del método de obtención de caracter por el que se va a cambiar el valor en la cadena.
+                        if (!cambio.equalsIgnoreCase("3")) {
                             modificado = cambio + modificado; //Agregado a la cadena donde se van almacenando los datos que salen de la máquina de Turing
                         } else {
                             modificado += " "; //Agregado a la cadena final del espacio terminador
                         }
-
+                        cadena [posicion] = this.ObtencionConvSegunda(state, valor);
                         movimiento = Integer.parseInt(this.ObtencionMovimiento(state, valor));//Llamado al método de obtención del movimiento ha realizar por el apuntador en la máquina de Turing
-                        mostrar += "\n[" + state + "] [" + caracter + Text + "] ----> (" + estado + ", " + cambio + ", " + movimiento + ")";
+                        mostrar += "\n[" + state + "] [" + caracter + Text + "] ----> (" + estado + ", (" + caracter + ", " + Text + ", " + cambio + "), " + movimiento + ")";
 
                         switch (movimiento) { //Checa el tipo de movimiento que da como resultado de la tabla de transición
                             case -1://Entra aquí si el movimiento del apuntador que se debe realizar es hacia la izquierda
@@ -454,9 +645,6 @@ public class Principal extends javax.swing.JFrame {
                 }
             }
         } while (!error);
-        /*} else {
-            JOptionPane.showMessageDialog(null, "La longitud de las cadenas es diferente,\nCambiar los valores aquí establecidos", "ERROR", JOptionPane.ERROR_MESSAGE);
-        }*/
 
         Resultado.setText(modificado);
         //Pasa el foco al textfield del código
