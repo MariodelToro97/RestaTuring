@@ -261,7 +261,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel7.setToolTipText("Nombre de la práctica");
 
         Resultado.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
-        Resultado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        Resultado.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         Resultado.setToolTipText("Resultado en el que se muestra.");
         Resultado.setEnabled(false);
         Resultado.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -427,9 +427,6 @@ public class Principal extends javax.swing.JFrame {
                         .addComponent(jLabel7)
                         .addGap(157, 157, 157))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(Resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(56, 56, 56))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel17)
                             .addComponent(jLabel18))
@@ -443,7 +440,10 @@ public class Principal extends javax.swing.JFrame {
                         .addGap(36, 36, 36))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 552, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(22, 22, 22))))
+                        .addGap(22, 22, 22))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(Resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(56, 56, 56))))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -645,7 +645,7 @@ public class Principal extends javax.swing.JFrame {
                 }
             }
         } while (!error);
-
+        modificado = modificado.trim();
         Resultado.setText(modificado);
         //Pasa el foco al textfield del código
         Valor.requestFocus();
